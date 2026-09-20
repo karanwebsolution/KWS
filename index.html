@@ -25,7 +25,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 .logo{font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:700;letter-spacing:0.02em;white-space:nowrap}
 .logo span{font-family:'Inter',sans-serif;font-size:0.7rem;font-weight:400;letter-spacing:0.15em;text-transform:uppercase;display:block;color:var(--navy-mute);margin-top:2px}
 .nav{display:flex;gap:24px;flex-wrap:wrap}
-.nav a{font-size:0.9rem;font-weight:500;opacity:0.72;transition:opacity 0.2s;white-space:nowrap}
+.nav a{font-size:0.9rem;font-weight:500;opacity:0.72;transition:opacity 0.2s;white-space:nowrap;cursor:pointer}
 .nav a:hover{opacity:1}
 .page{display:none}
 .page.active{display:block}
@@ -164,9 +164,9 @@ section{padding:80px 0}
     <nav class="nav">
       <a href="#home" data-nav="home">Home</a>
       <a href="#services" data-nav="services">Services</a>
-      <a href="#portfolio" data-nav="home">Portfolio</a>
-      <a href="#pricing" data-nav="home">Pricing</a>
-      <a href="#contact" data-nav="home">Contact</a>
+      <a href="#portfolio" data-nav="home" data-scroll="portfolio">Portfolio</a>
+      <a href="#pricing" data-nav="home" data-scroll="pricing">Pricing</a>
+      <a href="#contact" data-nav="home" data-scroll="contact">Contact</a>
     </nav>
   </div>
 </header>
@@ -180,8 +180,8 @@ section{padding:80px 0}
     <h1>I build communities and grow social presence for Web3, crypto, and startups.</h1>
     <p class="hero-sub">Complete server infrastructure and managed social accounts — delivered in <strong>24-48 hours</strong>. Not weeks.</p>
     <div class="hero-cta">
-      <a href="#contact" class="btn btn-primary">Start Your Project <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
-      <a href="#portfolio" class="btn btn-secondary">View Portfolio</a>
+      <a href="#contact" class="btn btn-primary" data-nav="home" data-scroll="contact">Start Your Project <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      <a href="#portfolio" class="btn btn-secondary" data-nav="home" data-scroll="portfolio">View Portfolio</a>
     </div>
     <div class="stats">
       <div class="stat"><span class="stat-num">24-48h</span><span class="stat-label">Delivery Time</span></div>
@@ -273,14 +273,14 @@ section{padding:80px 0}
         <div class="price">$13</div>
         <div class="price-note">One-time setup</div>
         <ul><li>15-20 text channels</li><li>5-8 roles</li><li>Basic bot setup</li><li>Welcome message</li><li>24-hour delivery</li></ul>
-        <a href="#contact" class="btn btn-outline">Get Started</a>
+        <a href="#contact" class="btn btn-outline" data-nav="home" data-scroll="contact">Get Started</a>
       </div>
       <div class="price-card">
         <h3>Professional</h3>
         <div class="price">$31</div>
         <div class="price-note">One-time setup</div>
         <ul><li>30-40 text channels</li><li>15+ roles</li><li>Verification system</li><li>3 bots installed</li><li>Welcome flow + auto-roles</li><li>48-hour delivery</li></ul>
-        <a href="#contact" class="btn btn-outline">Get Started</a>
+        <a href="#contact" class="btn btn-outline" data-nav="home" data-scroll="contact">Get Started</a>
       </div>
       <div class="price-card popular">
         <div class="badge">Most Popular</div>
@@ -288,14 +288,14 @@ section{padding:80px 0}
         <div class="price">$78</div>
         <div class="price-note">One-time setup</div>
         <ul><li>60+ channels</li><li>25+ roles</li><li>Forum channels</li><li>5+ bots installed</li><li>Custom branding (graphics)</li><li>Full moderation system</li><li>3-day delivery</li></ul>
-        <a href="#contact" class="btn btn-primary">Get Started</a>
+        <a href="#contact" class="btn btn-primary" data-nav="home" data-scroll="contact">Get Started</a>
       </div>
       <div class="price-card">
         <h3>Elite</h3>
         <div class="price">$182</div>
         <div class="price-note">One-time setup</div>
         <ul><li>Custom Discord bot</li><li>100+ channels</li><li>30+ roles</li><li>10 custom graphics</li><li>Mod handbook + training</li><li>30-day priority support</li></ul>
-        <a href="#contact" class="btn btn-outline">Get Started</a>
+        <a href="#contact" class="btn btn-outline" data-nav="home" data-scroll="contact">Get Started</a>
       </div>
     </div>
 
@@ -379,7 +379,7 @@ section{padding:80px 0}
 <div class="page" id="page-services">
   <section class="service-hero">
     <div class="container">
-      <a href="#home" class="btn-back" data-nav="home"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg> Back</a>
+      <a class="btn-back" data-nav="home"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg> Back</a>
       <p class="eyebrow">Our Services</p>
       <h1>Community & social media management, done right.</h1>
       <p>Pick a platform. Get a dedicated manager. Monthly retainer. Cancel anytime after 3 months.</p>
@@ -428,7 +428,7 @@ section{padding:80px 0}
 <div class="page" id="page-discord-mgmt">
   <section class="service-hero">
     <div class="container">
-      <a href="#services" class="btn-back" data-nav="services"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg> All Services</a>
+      <a class="btn-back" data-nav="services"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg> All Services</a>
       <p class="eyebrow">Service</p>
       <h1>Discord Management</h1>
       <p>Full-time community management for your Discord server — moderation, engagement, events, and member support handled by a dedicated manager.</p>
@@ -454,7 +454,7 @@ section{padding:80px 0}
           <div class="label">Monthly Retainer</div>
           <div class="amount">$26</div>
           <div class="period">per month • min 3 months</div>
-          <a href="#contact" class="btn btn-primary" data-nav="home">Get Started</a>
+          <a class="btn btn-primary" data-nav="home" data-scroll="contact">Get Started</a>
           <div class="note">50% advance on 1st of every month. Cancel anytime after 3 months.</div>
         </div>
       </div>
@@ -466,7 +466,7 @@ section{padding:80px 0}
 <div class="page" id="page-instagram-mgmt">
   <section class="service-hero">
     <div class="container">
-      <a href="#services" class="btn-back" data-nav="services"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg> All Services</a>
+      <a class="btn-back" data-nav="services"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg> All Services</a>
       <p class="eyebrow">Service</p>
       <h1>Instagram Management</h1>
       <p>End-to-end Instagram management — from content creation to engagement — designed to grow your brand, audience, and inbound leads.</p>
@@ -492,7 +492,7 @@ section{padding:80px 0}
           <div class="label">Monthly Retainer</div>
           <div class="amount">$52</div>
           <div class="period">per month • min 3 months</div>
-          <a href="#contact" class="btn btn-primary" data-nav="home">Get Started</a>
+          <a class="btn btn-primary" data-nav="home" data-scroll="contact">Get Started</a>
           <div class="note">50% advance on 1st of every month. Cancel anytime after 3 months.</div>
         </div>
       </div>
@@ -504,7 +504,7 @@ section{padding:80px 0}
 <div class="page" id="page-tiktok-mgmt">
   <section class="service-hero">
     <div class="container">
-      <a href="#services" class="btn-back" data-nav="services"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg> All Services</a>
+      <a class="btn-back" data-nav="services"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg> All Services</a>
       <p class="eyebrow">Service</p>
       <h1>TikTok Management</h1>
       <p>Grow your brand on TikTok with consistent, trend-driven content that gets reach and converts viewers into customers.</p>
@@ -530,7 +530,7 @@ section{padding:80px 0}
           <div class="label">Monthly Retainer</div>
           <div class="amount">$52</div>
           <div class="period">per month • min 3 months</div>
-          <a href="#contact" class="btn btn-primary" data-nav="home">Get Started</a>
+          <a class="btn btn-primary" data-nav="home" data-scroll="contact">Get Started</a>
           <div class="note">50% advance on 1st of every month. Cancel anytime after 3 months.</div>
         </div>
       </div>
@@ -542,7 +542,7 @@ section{padding:80px 0}
 <div class="page" id="page-x-mgmt">
   <section class="service-hero">
     <div class="container">
-      <a href="#services" class="btn-back" data-nav="services"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg> All Services</a>
+      <a class="btn-back" data-nav="services"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg> All Services</a>
       <p class="eyebrow">Service</p>
       <h1>X Management</h1>
       <p>Build authority and community on X (Twitter) with daily posting, thoughtful threads, and real engagement — perfect for founders and Web3 projects.</p>
@@ -568,7 +568,7 @@ section{padding:80px 0}
           <div class="label">Monthly Retainer</div>
           <div class="amount">$42</div>
           <div class="period">per month • min 3 months</div>
-          <a href="#contact" class="btn btn-primary" data-nav="home">Get Started</a>
+          <a class="btn btn-primary" data-nav="home" data-scroll="contact">Get Started</a>
           <div class="note">50% advance on 1st of every month. Cancel anytime after 3 months.</div>
         </div>
       </div>
@@ -580,7 +580,7 @@ section{padding:80px 0}
 <div class="page" id="page-social-mgmt">
   <section class="service-hero">
     <div class="container">
-      <a href="#services" class="btn-back" data-nav="services"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg> All Services</a>
+      <a class="btn-back" data-nav="services"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg> All Services</a>
       <p class="eyebrow">Full Package</p>
       <h1>Social Media Management</h1>
       <p>Complete cross-platform management — Discord, Instagram, TikTok, and X — unified under one strategy, one manager, one report.</p>
@@ -607,7 +607,7 @@ section{padding:80px 0}
           <div class="label">Full Package</div>
           <div class="amount">$130</div>
           <div class="period">per month • min 3 months</div>
-          <a href="#contact" class="btn btn-primary" data-nav="home">Get Started</a>
+          <a class="btn btn-primary" data-nav="home" data-scroll="contact">Get Started</a>
           <div class="note">50% advance on 1st of every month. Cancel anytime after 3 months.</div>
         </div>
       </div>
@@ -627,41 +627,58 @@ const GITHUB_USERNAME = 'karanwebsolution';
 const GITHUB_REPO = 'KWS';
 const BRANCH = 'main';
 
-function showPage(pageId) {
-  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-  const target = document.getElementById('page-' + pageId);
-  if (target) { target.classList.add('active'); window.scrollTo({ top: 0, behavior: 'smooth' }); }
-}
-
+// ===== NAV / PAGE ROUTER =====
 document.querySelectorAll('[data-nav]').forEach(el => {
   el.addEventListener('click', e => {
+    e.preventDefault();
     const pageId = el.getAttribute('data-nav');
-    if (pageId) { e.preventDefault(); showPage(pageId); history.replaceState(null, '', '#' + pageId); }
+    const scrollTo = el.getAttribute('data-scroll');
+
+    // Switch page
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    const target = document.getElementById('page-' + pageId);
+    if (target) target.classList.add('active');
+
+    history.replaceState(null, '', '#' + (scrollTo || pageId));
+
+    if (scrollTo) {
+      setTimeout(() => {
+        const section = document.getElementById(scrollTo);
+        if (section) {
+          const headerH = document.querySelector('.site-header')?.offsetHeight || 0;
+          const y = section.getBoundingClientRect().top + window.pageYOffset - headerH - 20;
+          window.scrollTo({ top: y, behavior: 'smooth' });
+        }
+      }, 80);
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
   });
 });
 
+// Load from hash on page load
 window.addEventListener('load', () => {
   const hash = window.location.hash.replace('#', '');
   const known = ['home','services','discord-mgmt','instagram-mgmt','tiktok-mgmt','x-mgmt','social-mgmt'];
-  if (hash && known.includes(hash)) showPage(hash);
+  if (hash && known.includes(hash)) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    const target = document.getElementById('page-' + hash);
+    if (target) target.classList.add('active');
+  }
 });
 
+// Back/forward
 window.addEventListener('hashchange', () => {
   const hash = window.location.hash.replace('#', '');
   const known = ['home','services','discord-mgmt','instagram-mgmt','tiktok-mgmt','x-mgmt','social-mgmt'];
-  if (known.includes(hash)) showPage(hash);
+  if (known.includes(hash)) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    const target = document.getElementById('page-' + hash);
+    if (target) target.classList.add('active');
+  }
 });
 
-document.querySelectorAll('a[href^="#"]:not([data-nav])').forEach(link => {
-  link.addEventListener('click', e => {
-    const targetId = link.getAttribute('href').replace('#', '');
-    const known = ['home','services','discord-mgmt','instagram-mgmt','tiktok-mgmt','x-mgmt','social-mgmt'];
-    if (known.includes(targetId)) return;
-    const target = document.getElementById(targetId);
-    if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
-  });
-});
-
+// ===== GALLERY AUTO-LOAD =====
 async function loadGallery(folder, containerId) {
   const container = document.getElementById(containerId);
   if (!container) return;
@@ -672,7 +689,10 @@ async function loadGallery(folder, containerId) {
     const files = await res.json();
     if (!Array.isArray(files)) throw new Error('Not a folder');
     const images = files.filter(f => f.type === 'file' && /\.(png|jpg|jpeg|webp|gif|avif)$/i.test(f.name));
-    if (images.length === 0) { container.innerHTML = `<div class="gallery-empty">No screenshots in <code>images/${folder}/</code> yet.</div>`; return; }
+    if (images.length === 0) {
+      container.innerHTML = `<div class="gallery-empty">No screenshots in <code>images/${folder}/</code> yet.</div>`;
+      return;
+    }
     images.sort((a, b) => a.name.localeCompare(b.name, undefined, { numeric: true }));
     container.innerHTML = images.map(img => `<figure><img src="${img.download_url}" alt="${folder} screenshot" loading="lazy"></figure>`).join('');
   } catch (err) {
@@ -684,9 +704,16 @@ loadGallery('gaming', 'gallery-gaming');
 loadGallery('trading', 'gallery-trading');
 loadGallery('crypto', 'gallery-crypto');
 
+// ===== FADE-IN ON SCROLL =====
 const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => { if (entry.isIntersecting) { entry.target.style.opacity = '1'; entry.target.style.transform = 'translateY(0)'; } });
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.opacity = '1';
+      entry.target.style.transform = 'translateY(0)';
+    }
+  });
 }, { threshold: 0.1 });
+
 document.querySelectorAll('.feature, .demo-section, .price-card, .step, .contact-card, .service-card').forEach(el => {
   el.style.opacity = '0';
   el.style.transform = 'translateY(20px)';
