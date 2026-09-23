@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>KWS Social Media — Discord & Social Management</title>
-<meta name="description" content="Discord communities and social media management for Web3, crypto, and startups. Delivered in 24-48 hours.">
+<meta name="description" content="Discord communities and social media management for Web3, crypto, and startups. Delivered in 4-7 hours.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -106,6 +106,7 @@ section{padding:80px 0}
 .price-card ul{list-style:none;flex:1;margin-top:14px}
 .price-card li{font-size:0.9rem;color:var(--navy-soft);padding:7px 0 7px 20px;position:relative;line-height:1.5}
 .price-card li::before{content:'';position:absolute;left:0;top:14px;width:8px;height:1.5px;background:var(--olive)}
+.price-card li strong{color:var(--navy);font-weight:600}
 .retainer-block{margin-bottom:60px}
 .retainer-block h3{font-size:1.3rem;margin-bottom:20px}
 .retainer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
@@ -117,6 +118,18 @@ section{padding:80px 0}
 .addon-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px}
 .addon{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:14px 18px;background:var(--cream);border:1px solid var(--border);border-radius:10px;font-size:0.92rem}
 .addon-price{font-weight:500;color:var(--olive);white-space:nowrap;font-size:0.86rem}
+.delivery-options{background:var(--cream-soft);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.delivery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;margin-top:20px}
+.delivery-card{background:var(--cream);border:1px solid var(--border);border-radius:16px;padding:32px 28px;position:relative}
+.delivery-card .tag{position:absolute;top:-10px;left:24px;background:var(--navy);color:var(--cream);font-size:0.65rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;padding:4px 12px;border-radius:999px}
+.delivery-card .tag.alt{background:var(--olive)}
+.delivery-card h3{margin-bottom:14px;font-size:1.2rem}
+.delivery-card .subtitle{font-size:0.85rem;color:var(--navy-mute);margin-bottom:18px;line-height:1.5}
+.delivery-card ol{margin-left:0;padding-left:0;list-style:none;counter-reset:step}
+.delivery-card ol li{font-size:0.92rem;color:var(--navy-soft);padding:10px 0 10px 34px;position:relative;line-height:1.55;border-bottom:1px solid var(--border)}
+.delivery-card ol li:last-child{border-bottom:none}
+.delivery-card ol li::before{counter-increment:step;content:counter(step);position:absolute;left:0;top:10px;width:22px;height:22px;background:var(--navy);color:var(--cream);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.72rem;font-weight:600}
+.delivery-card .note{margin-top:16px;font-size:0.82rem;color:var(--navy-mute);font-style:italic}
 .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px}
 .step{padding:24px 0;border-top:1px solid var(--border-strong)}
 .step-num{font-family:'Playfair Display',serif;font-size:1.6rem;color:var(--olive);font-style:italic;display:block;margin-bottom:10px}
@@ -178,13 +191,13 @@ section{padding:80px 0}
   <div class="container">
     <p class="eyebrow">Professional Discord & Social Media</p>
     <h1>I build communities and grow social presence for Web3, crypto, and startups.</h1>
-    <p class="hero-sub">Complete server infrastructure and managed social accounts — delivered in <strong>24-48 hours</strong>. Not weeks.</p>
+    <p class="hero-sub">Complete server infrastructure and managed social accounts — delivered in <strong>4-7 hours</strong>. Not weeks.</p>
     <div class="hero-cta">
       <a href="#contact" class="btn btn-primary" data-nav="home" data-scroll="contact">Start Your Project <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
       <a href="#portfolio" class="btn btn-secondary" data-nav="home" data-scroll="portfolio">View Portfolio</a>
     </div>
     <div class="stats">
-      <div class="stat"><span class="stat-num">24-48h</span><span class="stat-label">Delivery Time</span></div>
+      <div class="stat"><span class="stat-num">4-7h</span><span class="stat-label">Delivery Time</span></div>
       <div class="stat"><span class="stat-num">3</span><span class="stat-label">Demo Servers</span></div>
       <div class="stat"><span class="stat-num">5</span><span class="stat-label">Services</span></div>
     </div>
@@ -268,35 +281,96 @@ section{padding:80px 0}
     <p class="section-sub">Transparent pricing in USD. No hidden fees. Every package includes full setup, testing, and post-delivery support.</p>
 
     <div class="pricing-grid">
+
       <div class="price-card">
         <h3>Starter</h3>
-        <div class="price">$13</div>
-        <div class="price-note">One-time setup</div>
-        <ul><li>15-20 text channels</li><li>5-8 roles</li><li>Basic bot setup</li><li>Welcome message</li><li>24-hour delivery</li></ul>
+        <div class="price">$42</div>
+        <div class="price-note">₹4,000 • One-time</div>
+        <ul>
+          <li>40+ Discord channels</li>
+          <li>10-12 roles</li>
+          <li>8+ categories</li>
+          <li>Forum channels included</li>
+          <li>No bots included</li>
+          <li>Basic moderation setup</li>
+          <li>Custom branding (basic)</li>
+          <li>Simple welcome flow</li>
+          <li><strong>4-hour delivery</strong></li>
+          <li>1 revision</li>
+          <li>5-day priority support</li>
+        </ul>
         <a href="#contact" class="btn btn-outline" data-nav="home" data-scroll="contact">Get Started</a>
       </div>
+
       <div class="price-card">
         <h3>Professional</h3>
-        <div class="price">$31</div>
-        <div class="price-note">One-time setup</div>
-        <ul><li>30-40 text channels</li><li>15+ roles</li><li>Verification system</li><li>3 bots installed</li><li>Welcome flow + auto-roles</li><li>48-hour delivery</li></ul>
+        <div class="price">$52</div>
+        <div class="price-note">₹5,000 • One-time</div>
+        <ul>
+          <li>50+ Discord channels</li>
+          <li>15-20 roles</li>
+          <li>10+ categories</li>
+          <li>Forum channels included</li>
+          <li>Up to 3 bots installed</li>
+          <li>Verification system</li>
+          <li>Auto-roles / reaction roles</li>
+          <li>Standard moderation setup</li>
+          <li>Custom branding (standard)</li>
+          <li><strong>5-hour delivery</strong></li>
+          <li>2 revisions</li>
+          <li>10-day priority support</li>
+        </ul>
         <a href="#contact" class="btn btn-outline" data-nav="home" data-scroll="contact">Get Started</a>
       </div>
+
       <div class="price-card popular">
         <div class="badge">Most Popular</div>
         <h3>Premium</h3>
         <div class="price">$78</div>
-        <div class="price-note">One-time setup</div>
-        <ul><li>60+ channels</li><li>25+ roles</li><li>Forum channels</li><li>5+ bots installed</li><li>Custom branding (graphics)</li><li>Full moderation system</li><li>3-day delivery</li></ul>
+        <div class="price-note">₹7,500 • One-time</div>
+        <ul>
+          <li>60+ Discord channels</li>
+          <li>25+ roles</li>
+          <li>12+ categories</li>
+          <li>Forum channels included</li>
+          <li>5+ bots installed</li>
+          <li>Verification + auto-roles</li>
+          <li>Full moderation system</li>
+          <li>Custom branding (graphics pack)</li>
+          <li><strong>1 AI UGC video</strong></li>
+          <li>Advanced welcome flow</li>
+          <li><strong>6-hour delivery</strong></li>
+          <li>4 revisions</li>
+          <li>14-day priority support</li>
+          <li>Monthly analytics report</li>
+        </ul>
         <a href="#contact" class="btn btn-primary" data-nav="home" data-scroll="contact">Get Started</a>
       </div>
+
       <div class="price-card">
         <h3>Elite</h3>
-        <div class="price">$182</div>
-        <div class="price-note">One-time setup</div>
-        <ul><li>Custom Discord bot</li><li>100+ channels</li><li>30+ roles</li><li>10 custom graphics</li><li>Mod handbook + training</li><li>30-day priority support</li></ul>
+        <div class="price">$125</div>
+        <div class="price-note">₹12,000 • One-time</div>
+        <ul>
+          <li>150+ Discord channels</li>
+          <li>30+ roles</li>
+          <li>15+ categories</li>
+          <li>Forum channels included</li>
+          <li>10+ custom bots</li>
+          <li>Verification + auto-roles</li>
+          <li>Full moderation + audit logs</li>
+          <li>Custom branding (complete)</li>
+          <li><strong>3 AI UGC videos</strong></li>
+          <li>Advanced welcome + mod handbook</li>
+          <li>30-min training call</li>
+          <li><strong>7-hour delivery</strong></li>
+          <li>Unlimited revisions</li>
+          <li>30-day priority support</li>
+          <li>Weekly analytics report</li>
+        </ul>
         <a href="#contact" class="btn btn-outline" data-nav="home" data-scroll="contact">Get Started</a>
       </div>
+
     </div>
 
     <div class="retainer-block">
@@ -324,15 +398,56 @@ section{padding:80px 0}
   </div>
 </section>
 
+<!-- DELIVERY OPTIONS -->
+<section class="delivery-options" id="delivery">
+  <div class="container">
+    <h2>Two Ways to Deliver</h2>
+    <p class="section-sub">Choose the delivery method that suits you best. Both are secure, fast, and end with you owning 100% of your server.</p>
+
+    <div class="delivery-grid">
+
+      <div class="delivery-card">
+        <span class="tag">Option 1</span>
+        <h3>DIY Setup</h3>
+        <p class="subtitle">You create your own server and bot. We build on top.</p>
+        <ol>
+          <li>You create a Discord server (2 min)</li>
+          <li>You create a bot on Discord Developer Portal (5 min)</li>
+          <li>You share the bot token + server ID with KWS</li>
+          <li>KWS builds your complete server</li>
+          <li>You keep 100% ownership from start to finish</li>
+        </ol>
+        <div class="note">Full setup guide provided. Takes 7 minutes of your time.</div>
+      </div>
+
+      <div class="delivery-card">
+        <span class="tag alt">Option 2</span>
+        <h3>Done-For-You</h3>
+        <p class="subtitle">We build on our account. You get full ownership after payment.</p>
+        <ol>
+          <li>You pay 50% advance</li>
+          <li>KWS builds the complete server on our account</li>
+          <li>KWS sends screenshots for your approval</li>
+          <li>You pay the remaining 50%</li>
+          <li>KWS invites you and transfers ownership to you</li>
+          <li>KWS removes our bot and leaves the server</li>
+        </ol>
+        <div class="note">Zero technical work for you. Requires 2FA enabled on your Discord account.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <section class="how">
   <div class="container">
     <h2>How It Works</h2>
     <div class="steps">
       <div class="step"><span class="step-num">01</span><h3>Discovery Call</h3><p>10-minute call to understand your project, community goals, and requirements.</p></div>
       <div class="step"><span class="step-num">02</span><h3>Proposal & Advance</h3><p>Written proposal with package details. 50% advance confirms the booking.</p></div>
-      <div class="step"><span class="step-num">03</span><h3>Build Phase</h3><p>Complete server built in 24-72 hours — roles, channels, permissions, bots, branding.</p></div>
+      <div class="step"><span class="step-num">03</span><h3>Build Phase</h3><p>Complete server built in 4-7 hours — roles, channels, permissions, bots, branding.</p></div>
       <div class="step"><span class="step-num">04</span><h3>Delivery & Handover</h3><p>Screenshots shared for review. Revisions made. Full ownership transferred.</p></div>
-      <div class="step"><span class="step-num">05</span><h3>Support Period</h3><p>Post-delivery support (7-30 days depending on package). Retainer available.</p></div>
+      <div class="step"><span class="step-num">05</span><h3>Support Period</h3><p>Post-delivery support (5-30 days depending on package). Retainer available.</p></div>
     </div>
   </div>
 </section>
@@ -340,11 +455,12 @@ section{padding:80px 0}
 <section class="faq">
   <div class="container">
     <h2>FAQ</h2>
-    <details><summary>How fast can you deliver?</summary><p>Starter in 24 hours, Professional in 48 hours, Premium in 3 days, Elite in 5-7 days. Rush delivery available on request.</p></details>
-    <details><summary>Do I need to provide anything?</summary><p>Just your server and a Discord bot token. I handle everything else. Full setup guide provided.</p></details>
-    <details><summary>Will I own everything?</summary><p>Yes. 100% ownership transferred to you after final payment. No lock-in, no required subscriptions.</p></details>
+    <details><summary>How fast can you deliver?</summary><p>Starter in 4 hours, Professional in 5 hours, Premium in 6 hours, Elite in 7 hours. Rush delivery available on request.</p></details>
+    <details><summary>Do I need to provide anything?</summary><p>It depends on your choice — Option 1 (DIY): you create the server + bot. Option 2 (Done-For-You): nothing required except 2FA enabled on your Discord account.</p></details>
+    <details><summary>Will I own everything?</summary><p>Yes. 100% ownership transferred to you. In Option 2, we transfer server ownership to you after final payment and remove our bot.</p></details>
     <details><summary>Do you offer custom bots?</summary><p>Yes — custom Discord bots available in Elite package and as add-on ($25).</p></details>
     <details><summary>What payment methods do you accept?</summary><p><strong>USDT</strong> (TRC20 / ERC20) and <strong>UPI</strong>. International clients pay in USDT; India-based clients can use UPI.</p></details>
+    <details><summary>What is an AI UGC video?</summary><p>An AI-generated promotional video for your brand — designed for social media (Instagram, TikTok, X). Not a Discord tutorial video.</p></details>
     <details><summary>What if I need changes after delivery?</summary><p>Revisions are included in every package. Post-support period extensions available as add-on.</p></details>
   </div>
 </section>
@@ -618,7 +734,7 @@ section{padding:80px 0}
 <footer class="site-footer">
   <div class="container">
     <p>© 2026 KWS Social Media. All rights reserved.</p>
-    <p class="footer-tag">Built with automation. Delivered with care.</p>
+    <p class="footer-tag">Crafted with care. Delivered on time.</p>
   </div>
 </footer>
 
@@ -634,7 +750,6 @@ document.querySelectorAll('[data-nav]').forEach(el => {
     const pageId = el.getAttribute('data-nav');
     const scrollTo = el.getAttribute('data-scroll');
 
-    // Switch page
     document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
     const target = document.getElementById('page-' + pageId);
     if (target) target.classList.add('active');
@@ -656,7 +771,6 @@ document.querySelectorAll('[data-nav]').forEach(el => {
   });
 });
 
-// Load from hash on page load
 window.addEventListener('load', () => {
   const hash = window.location.hash.replace('#', '');
   const known = ['home','services','discord-mgmt','instagram-mgmt','tiktok-mgmt','x-mgmt','social-mgmt'];
@@ -667,7 +781,6 @@ window.addEventListener('load', () => {
   }
 });
 
-// Back/forward
 window.addEventListener('hashchange', () => {
   const hash = window.location.hash.replace('#', '');
   const known = ['home','services','discord-mgmt','instagram-mgmt','tiktok-mgmt','x-mgmt','social-mgmt'];
@@ -714,7 +827,7 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.1 });
 
-document.querySelectorAll('.feature, .demo-section, .price-card, .step, .contact-card, .service-card').forEach(el => {
+document.querySelectorAll('.feature, .demo-section, .price-card, .step, .contact-card, .service-card, .delivery-card').forEach(el => {
   el.style.opacity = '0';
   el.style.transform = 'translateY(20px)';
   el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
